@@ -10,20 +10,31 @@
 </head>
 
 <body>
+  <h1 class="visually-hidden">Product preview card component</h1>
 
   <ul class="products">
     <li class="product">
-      <img class="product__image" src="./images/image-product-mobile.jpg"
-        alt="Bottle of Chanel Gabrielle Essence Eau De Parfum">
-      <span>Perfume</span>
-      <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
-      <p class="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.</p>
-      <div class="product__price price">
-        <p class="price__discount">$149.99</p>
-        <p class="price__initial">$169.99</p>
+      <picture class="product__image">
+        <source srcset="./images/image-product-mobile.jpg" media="(max-width: 375px)" width="350" height="342" />
+        <source srcset="./images/image-product-desktop.jpg" width="300" height="456" />
+        <img src="./images/image-product-desktop.jpg" alt="Bottle of Chanel Gabrielle Essence Eau De Parfum" width="300"
+          height="456" />
+      </picture>
+
+      <div class="product-content">
+        <span class="product__type">Perfume</span>
+        <h2 class="product__title">Gabrielle Essence Eau De Parfum</h2>
+        <p class="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+        <div class="price">
+          <p class="price__discount">$149.99</p>
+          <p class="price__initial">$169.99</p>
+        </div>
+        <button class="button" type="button">
+          <span class="button__icon"></span>
+          <span class="button__text">Add to Cart</span>
+        </button>
       </div>
-      <button class="button" type="button">Add to Cart</button>
     </li>
   </ul>
 
