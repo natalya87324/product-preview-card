@@ -56,7 +56,6 @@ body {
 .products {
   display: grid;
   place-items: center;
-  list-style: none;
   min-height: 100vh;
 }
 
@@ -94,6 +93,7 @@ body {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--color-grey);
+  order: -1;
 }
 
 .product__title {
